@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.arsyadani.test.Activity_Main_Admin">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/tab_layout"/>
+    </android.support.design.widget.AppBarLayout>
+</android.support.constraint.ConstraintLayout>
+
+<!--<android.support.design.widget.TabLayout-->
+<!--android:id="@+id/tab_layout"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_below="@+id/toolbar"-->
+<!--android:background="@android:color/transparent"-->
+<!--android:elevation="6dp"-->
+<!--android:minHeight="?attr/actionBarSize"-->
+<!--app:tabIndicatorColor="@color/colorPrimary" />-->
+
+<!--<android.support.v4.view.ViewPager-->
+<!--android:id="@+id/pager"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="fill_parent"-->
+<!--android:layout_below="@id/tab_layout"/>-->

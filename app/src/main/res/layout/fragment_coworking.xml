@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.arsyadani.test.FragmentCoworking"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/sv_search_coworking"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:elevation="2dp"
+            android:background="#ffffff"
+            android:layout_height="?attr/actionBarSize"
+            android:queryHint="Cari tempat">
+        </SearchView>
+
+        <ListView
+            android:id="@+id/lv_list"
+            android:layout_width="match_parent"
+            android:layout_height="512dp" />
+    </LinearLayout>
+
+</LinearLayout>

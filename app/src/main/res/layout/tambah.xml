@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.example.arsyadani.test.Activity_Tambah">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Tempat"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_nama_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nama"
+            android:inputType="textPersonName" />
+
+        <RadioGroup
+            android:id="@+id/rg_radio_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_cafe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cafe" />
+
+            <RadioButton
+                android:id="@+id/rb_coworking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Coworking" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_alamat_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Alamat"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/et_telp_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Telepon"
+            android:inputType="phone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_senin"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Senin"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_senin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_jumat"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Jumat"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jumat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_selasa"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Selasa"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_selasa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_sabtu"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sabtu"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sabtu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_rabu"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Rabu"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_rabu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cb_minggu"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Minggu"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_minggu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_kamis"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kamis"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_kamis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(8:00 - 23:00)"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_lati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Latitude"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_longi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Longitude"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pilih_tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pilih tempat"/>
+
+        <!--Informasi Tambahan-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:text="Informasi Tambahan"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Biaya, order, durasi"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_kapasitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Kapasitas"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_prosedurSewa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Prosedur sewa"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_waktuRamai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Waktu ramai"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Persyaratan masuk"
+            android:inputType="text" />
+
+        <!--Foto-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:text="Foto"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ListView
+                android:id="@+id/lv_multiple_image"
+                android:layout_width="match_parent"
+                android:layout_height="132dp" />
+        </LinearLayout>
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_gambar_360"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_marginBottom="15dp"/>-->
+
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="text"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/et_nama_foto_360"-->
+        <!--android:hint="Nama Foto 360" />-->
+
+        <Button
+            android:id="@+id/btn_foto_360"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Pilih Gambar 360" />
+
+        <ImageView
+            android:id="@+id/iv_gambar"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:id="@+id/btn_pilih_gambar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Pilih Gambar" />
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:text="Simpan" />
+
+    </LinearLayout>
+</ScrollView>
