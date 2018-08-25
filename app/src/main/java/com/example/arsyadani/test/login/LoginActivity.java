@@ -3,7 +3,6 @@ package com.example.arsyadani.test.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -12,11 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.arsyadani.test.Activity_Login;
 import com.example.arsyadani.test.Activity_Main_Admin;
 import com.example.arsyadani.test.Activity_Main_User;
 import com.example.arsyadani.test.Activity_Signup;
 import com.example.arsyadani.test.R;
+import com.example.arsyadani.test.util.Constant;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,24 +29,27 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
     private EditText et_email;
     private EditText et_password;
-
     private Button btn_login;
     private Button btn_signup;
 
     private FirebaseAuth mAuth;
 
-    private static final String TAG = "Activity_Login";
+    private void init() {
+        et_email = (EditText) findViewById(R.id.et_email);
+        et_password = (EditText) findViewById(R.id.et_password);
+        btn_login = (Button) findViewById(R.id.btn_login);
+        btn_signup = (Button) findViewById(R.id.btn_signup);
+
+//        mAuth = Constant.firebaseAuth;
+        mAuth = FirebaseAuth.getInstance();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        et_email = (EditText) findViewById(R.id.et_email);
-        et_password = (EditText) findViewById(R.id.et_password);
-        btn_login = (Button) findViewById(R.id.btn_login);
-        btn_signup = (Button) findViewById(R.id.btn_signup);
-        mAuth = FirebaseAuth.getInstance();
+        init();
 
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful() || email.equalsIgnoreCase("text")) {
-                    Log.d(TAG, "signInWithEmail:success");
+                    Log.d("Activity_Login", "signInWithEmail:success");
                     FirebaseUser user = mAuth.getCurrentUser();
 
                     if(user.getUid().equalsIgnoreCase("yuYiVCiPVve7BOOe5ZZC2sQRcCj1")) {
@@ -106,7 +108,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(main);
                     }
                 } else {
-                    Log.w(TAG, "signInWithEmail:failure", task.getException());
+                    Log.w("Activity_Login", "signInWithEmail:failure", task.getException());
                     Toast.makeText(LoginActivity.this, "Email/password salah", Toast.LENGTH_SHORT).show();
                 }
             }
